@@ -1,0 +1,13 @@
+body, div{
+    margin: 0px;
+    border: 0px;
+    padding: 0px;
+    background-color: transparent;
+}
+
+.xs_cameo_font{
+    color: #404040
+    text-shadow:
+    1px -1px 1px #fff,
+    -1px 1px 1px rgba(19, 33, 46, 0.56);
+}

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+    <html>
+    <head lang="en">
+        <meta charset="UTF-8">
+        <title>精准扶贫大数据平台</title>
+        <link rel="shortcut icon" href="../img/icon_login.png">
+        <script src="../base/map/libs/SuperMap.Include.js"></script>
+        <script src="../lib/Lib.Include.js"></script>
+    </head>
+<body>
+    <div id="xs_mainC" style="height: 100%; position: relative;background: #292c27;">
+        <div id="xs_MapContainer">
+            <div id="xs_Map"></div>
+    </div>
+    <div id="xs_titleC" style1="background:rgba(88,130,174,0.5)">
+        <!-- 搜索框-->
+        <div id="xs_searchbox_boxC" style1="height:40px;z-index1: 999;position1: relative;left1: 10px;top1: 10px;display: inline-block;"></div>
+        <div id="xs_title">毕节市精准扶贫挂图作战指挥平台</div>
+        <!-- 右上 时间差-->
+        <div id="xs_rt_btn_timer"></div>
+    </div>
+    <!--左工具栏 -->
+    <div id="xs_leftToolBarC">
+        <div id="xs_leftToolPanel" style="padding:10px; border: 3px solid red; width: 100%;height: 100%;left1: 26%; border-width:0px; background: transparent;position: absolute;scroll:no;"></div>
+    </div>
+    <!--左工区域树 -->
+    <div id="xs_leftZtreeC">
+        <div id="xs_main_ztree" style="padding:10px; border-radius: 0px;width: 100%;height: 100%;border: 5px solid #00bbee;"></div>
+    </div>
+    <!--右击菜单-->
+   <div id="xs_rightMeun" class="easyui-menu" style="width:120px; display: none;">
+       <div data-options="iconCls:'icon-large-chart'">
+           <span>统计分析</span>
+           <div style="width:120px;">
+               <div>
+                   <span>贫困指标</span>
+                   <div style="width:120px;">
+                       <div onclick="XS.Main.cRItem_Tjfx_Range(XS.Main.Tjfx.type.range_pkfsx);">贫困发生率</div>
+                       <div onclick="XS.Main.cRItem_Tjfx_Range(XS.Main.Tjfx.type.range_tpx);">脱贫率</div>
+                       <div onclick="XS.Main.cRItem_Tjfx_Range(XS.Main.Tjfx.type.range_wfx);">危房率</div>
+                       <div onclick="XS.Main.cRItem_Tjfx_Range(XS.Main.Tjfx.type.range_fpbqx);">扶贫搬迁率</div>
+                   </div>
+               </div>
+               <div>
+                   <span>四有五覆盖</span>
+                   <div style="width:120px;">
+                       <div onclick="XS.Main.Tjfx.Graph.graph(XS.Main.Tjfx.type.bar.fourOf45);">四有</div>
+                       <div onclick="XS.Main.Tjfx.Graph.graph(XS.Main.Tjfx.type.bar.fiveOf45);">五覆盖</div>
+                   </div>
+               </div>
+               <div>
+                   <span>五通四有</span>
+                   <div style="width:120px;">
+                       <div onclick="XS.Main.Tjfx.Graph.graph(XS.Main.Tjfx.type.bar.fiveOf54);">五通</div>
+                       <div onclick="XS.Main.Tjfx.Graph.graph(XS.Main.Tjfx.type.bar.fourOf54);">四有</div>
+                   </div>
+               </div>
+               <div onclick="XS.Main.Tjfx.Graph.graph(XS.Main.Tjfx.type.pie);">土地信息</div>
+               <div onclick="XS.Main.Tjfx.Graph.graph(XS.Main.Tjfx.type.bar.social);">社会保障</div>
+           </div>
+       </div>
+   </div>
+    <!--左 点击统计分析-->
+    <div id="xs_tjfx_leftMenu" class="easyui-panel" style="position:absolute;width: 130px;/*left: -120px;*/bottom: 50px;" data-options="closed:true">
+        <div id="xs_tjfx_leftMenuC" class="easyui-menu" data-options="inline:true" style="display: none;">
+                    <div>
+                        <span>贫困指标</span>
+                        <div style="width:120px;">
+                            <div onclick="XS.Main.cRItem_Tjfx_Range(XS.Main.Tjfx.type.range_pkfsx);">贫困发生率</div>
+                            <div onclick="XS.Main.cRItem_Tjfx_Range(XS.Main.Tjfx.type.range_tpx);">脱贫率</div>
+                            <div onclick="XS.Main.cRItem_Tjfx_Range(XS.Main.Tjfx.type.range_wfx);">危房率</div>
+                            <div onclick="XS.Main.cRItem_Tjfx_Range(XS.Main.Tjfx.type.range_fpbqx);">扶贫搬迁率</div>
+                        </div>
+                    </div>
+                    <div>
+                        <span>四有五覆盖</span>
+                        <div style="width:120px;">
+                            <div onclick="XS.Main.Tjfx.Graph.graph(XS.Main.Tjfx.type.bar.fourOf45);">四有</div>
+                            <div onclick="XS.Main.Tjfx.Graph.graph(XS.Main.Tjfx.type.bar.fiveOf45);">五覆盖</div>
+                        </div>
+                    </div>
+                    <div>
+                        <span>五通四有</span>
+                        <div style="width:120px;">
+                            <div onclick="XS.Main.Tjfx.Graph.graph(XS.Main.Tjfx.type.bar.fiveOf54);">五通</div>
+                            <div onclick="XS.Main.Tjfx.Graph.graph(XS.Main.Tjfx.type.bar.fourOf54);">四有</div>
+                        </div>
+                    </div>
+                    <div onclick="XS.Main.Tjfx.Graph.graph(XS.Main.Tjfx.type.pie);">土地信息</div>
+                    <div onclick="XS.Main.Tjfx.Graph.graph(XS.Main.Tjfx.type.bar.social);">社会保障</div>
+        </div>
+    </div>
+
+    <!-- 右下 工具按钮-->
+    <div class="xs_rb_btn" id="xs_rb_btn_screen">
+        <i class="fa fa-arrows-alt fa-1x" aria-hidden="true"></i>
+    </div>
+    <div class="xs_rb_btn" id="xs_rb_btn_tools">
+        <i class="fa fa-tasks" aria-hidden="true"></i>
+    </div>
+    <div class="xs_rb_btn" id="xs_rb_btn_ztree">
+        <i class="fa fa-list-ul fa-1x" aria-hidden="true"></i>
+    </div>
+    <!--底下 版权-->
+    <div id="xs_b_btn_copyright">Copyright &copy;毕节扶贫开发办公室&贵州工程应用技术学院</div>
+</div>
+<div id="xs_echartjs"></div>
+</body>
+</html>

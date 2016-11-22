@@ -1,0 +1,686 @@
+.window {
+    background-color:  #00bbee !important;
+}
+html, body{
+    height: 100%;
+    width: 100%;
+    background: #ffffff;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    position: relative;
+}
+
+.window, .panel-header, .l-btn{
+    background: #00bbee;
+}
+.xs_loading{
+    color: #00bbee;
+}
+.l-btn:hover{
+    background: #6abafe;
+}
+
+.galleria-info-link{
+    display: none;
+}
+.panel-header{
+    border-color: #6abafe;
+}
+
+#xs_MapContainer {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    border: 0px;
+}
+#xs_Map {
+    position: relative;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    min-height: 100%;
+    border: 0px;
+    cursor: pointer;
+}
+
+#xs_titleC{
+    z-index: 999;
+    position: absolute;
+    width: 100%;
+    height: 55px;
+    line-height: 55px;
+    left1: -10px;
+    top1: 10px;
+    text-align1: center;
+    background: rgba(88,130,174,0.5);
+    font-size1: 40px;
+    font-weight1: 900;
+    color1: rgba(255, 255, 255, 0.8); /*00bbee  2531EE*/
+
+    text-shadow1:
+    2px -2px 2px #000000
+   /* ,-2px 2px 2px #808080;*/
+}
+#xs_title{
+    vertical-align: top;
+    z-index1: 999;
+    position: relative;
+    width1: 100%;
+    left1: -10px;
+    top1: 10px;
+    text-align1: center;
+    background: transparent;
+    font-size: 35px;
+    font-weight: 900;
+    display: inline-block;
+    color: rgba(255, 255, 255, 0.8); /*00bbee  2531EE*/
+
+    text-shadow:
+    2px -2px 2px #000000
+   /* ,-2px 2px 2px #808080;*/
+}
+/*底-功能列表*/
+#xs_leftToolBarC{
+    z-index: 999;
+    border1: 3px solid green;
+    position: fixed;
+    left1: 0px;
+    bottom: -150px;
+    background: transparent;
+    width: 100%;
+    height: 140px;
+    scroll:no;
+    border-width1:0px;
+    /*border: 1px solid red;*/
+    /*-webkit-box-shadow:0 0 2px 2px rgba(19, 33, 46, 0.12);
+    -moz-box-shadow:0 0 2px 2px rgba(19, 33, 46, 0.12);
+    box-shadow:0 0 2px 2px rgba(19, 33, 46, 0.12);*/
+}
+
+/*左-区域树*/
+#xs_leftZtreeC{
+    z-index: 995;
+    position: absolute;
+    left: -300px;
+    top: 100px;
+    background: #fff;
+    width: 200px;
+    height: 500px;
+    -webkit-box-shadow:0 0 2px 2px rgba(19, 33, 46, 0.12);
+    -moz-box-shadow:0 0 2px 2px rgba(19, 33, 46, 0.12);
+    box-shadow:0 0 2px 2px rgba(19, 33, 46, 0.12);
+}
+#xs_leftZtreeC .panel-header{
+    height: 25px;
+    border: 1px solid #00bbee;
+}
+#xs_leftZtreeC .panel-title{
+    height: 25px;
+    line-height: 25px;
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+/*---------------贫困户-video------------------------------*/
+#xs_poor_video_down, .xs_poor_video_down{
+    width: 25px;
+    height: 25px;
+    border-radius:12px;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: #6e6e6e;
+    cursor: pointer;
+}
+#xs_poor_video_down:hover, .xs_poor_video_down:hover{
+    background-color: #5c5c5c;
+}
+
+/*-----------------------------统计分析--分段专题图-------------------------------------------------*/
+#xs_tjfx_range_Legend{
+    position: absolute;
+    right: 35px;
+    bottom: 5px;
+    width: 250px;
+    text-align: center;
+    border: 2px solid #D6E3F1;
+    border-radius: 2px;
+    background: #FFF;
+    opacity: 0.8;
+    display: none;
+    z-index: 1000;
+}
+
+#xs_tjfx_range_Legend .legendTitle{
+    line-height: 24px;
+    height: 24px;
+    background: #1E90FF;
+    /*background: url("../img/panel_tools.png") no-repeat -32px -16px #1E90FF;*/
+}
+#xs_poor_legendCollap:hover{
+    background: url("../img/panel_tools.png") no-repeat -32px -16px #eee;
+    border-radius:2px;
+    opacity: 1;
+}
+#xs_poor_legendCollap{
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    opacity: 0.8;
+    position: absolute;
+    margin-top: 4px;
+    right: 20px;
+    /*padding-left: 16px;*/
+    background: url("../img/panel_tools.png") no-repeat -32px -16px;
+}
+#xs_poor_legendClose:hover{
+    background: url("../img/panel_tools.png") no-repeat -16px 0 #ff0000;
+    border-radius:2px;
+    opacity: 1;
+}
+#xs_poor_legendClose{
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    opacity: 0.8;
+    position: absolute;
+    margin-top: 4px;
+    right: 4px;
+    /*padding-left: 16px;*/
+    background: url("../img/panel_tools.png") no-repeat -16px 0px;
+}
+#xs_tjfx_range_Legend .legendContent{
+    font-size: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    height: auto;
+    display: block;
+    overflow-y: auto;
+}
+#xs_tjfx_range_Legend .legendItemHeader{
+    top: 5px;
+    width: 100px;
+    height: 5px;
+    text-align: center;
+}
+#xs_tjfx_range_Legend .legendItemValue{
+    top: 5px;
+    width: 120px;
+    text-align: center;
+    height: 5px;
+}
+
+/*#xs_poor_legend .poorLegendContent{
+    font-size: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    height: auto;
+    display: block;
+    overflow-y: auto;
+}*/
+#xs_poor_legend .poorLegendItemRow:hover{
+    cursor: pointer;
+    background: #ddd;
+}
+/*-----------------------------脱贫率-------------------------------------------------*/
+
+/*---------------贫困洞察-----------------*/
+.orgchart{
+   /* background: transparent;*/
+    min-width: 96%;
+    height: 100%;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.orgchart td.left, .orgchart td.right, .orgchart td.top{
+    border-color: #00bbee;
+}
+.orgchart .node {
+    width: 130px;
+}
+.orgchart .node .title{
+    padding: 3px;
+    white-space: normal;
+    height: auto;
+}
+.orgchart .node .content{
+    padding: 3px;
+    white-space: normal;
+    height: auto;
+    min-height: 44px;
+}
+.orgchart td>.down, .orgchart .node .title{
+    background-color: #00bbee;
+}
+
+.orgchart .node .content {
+    border-color: #00bbee;
+}
+
+.oc-export-btn{
+    background: #00bbee;
+    margin-top: 10px;
+    margin-right: 10px;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 15px;
+    text-align: center;
+    border-width: 0px;
+    display: inline-block;
+    padding: 0px;
+    opacity: 0.9;
+}
+
+#xs_pkdc_msg_btnC a:hover{
+    background: #263844 !important;
+}
+
+.oc-export-btn:hover,.oc-export-btn:focus,.oc-export-btn:active{
+    background: #00bbee;
+    border-width: 0px;
+}
+
+.oc-export-btn:hover{
+    background: #09a1ee;
+}
+.xs_pkdc_AnalyslayLBtn{
+    width: 90px;
+    height: 60px;
+    background: #eaf2ff;
+    color: #000000;
+    margin-bottom: 5px;
+}
+
+/*------------------贫困户--四通五覆盖---------------------*/
+.xs_poor_45{
+    background-color: #eee;
+    padding-bottom: 10px;
+    width: 840px;
+    box-sizing: border-box;
+}
+.xs_poor_45_c{
+    width: 150px;
+    height: 190px;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    box-shadow: 2px 2px 3px rgba(50,50,50,0.5);
+    position: relative;
+    border-radius: 3px;
+    padding: 10px;
+    padding-top: 0px;
+
+    -webkit-transition: all 0.5s ease-in;
+    -moz-transition: all 0.5s ease-in;
+    -ms-transition: all 0.5s ease-in;
+    -o-transition: all 0.5s ease-in;
+    transition: all 0.5s ease-in;
+
+    display: inline-block;
+    margin-left: 15px;
+}
+
+.xs_poor_45_c:hover{
+    box-shadow: 15px 15px 20px rgba(50,50,50,0.4);
+    transform:scale(1.20);
+    -webkit-transform:rotate(0deg) scale(1.01);
+    z-index: 2;
+    cursor: pointer;
+}
+
+.xs_poor_45_title{
+    height: 50px;
+    line-height: 50px;
+    width: 100%;
+    color:#000088;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.xs_poor_45_f{
+    font-size: 18px;
+    font-weight: bold;
+    color: #5c5c5c;
+    text-align: center;
+    height:40px;
+    line-height: 40px;
+}
+
+.xs_poor_45_c img{
+    width: 100%;
+    height: 140px;
+    box-sizing: border-box;
+    border: 3px solid #f0f0f0;
+    /* filter:Gray;
+     -webkit-filter: grayscale(1);*/
+}
+
+.xs_poor_45_villItem{
+    width:28%;
+    height:40%;
+    border: 3px solid #f0f0f0;
+}
+
+.xs_poor_45_tip{
+    position: absolute;
+    bottom: 10px;
+    background-color: rgba(0, 0, 0, 0.31);
+    width: 130px;
+    text-align: center;
+    color: #FFFFFF;
+    padding-bottom: 2px;
+    display: none;
+    font-size: 13px;
+    padding: 8px 0px;
+    color: #ffffff;
+}
+
+#xs_poor_45_aqyd{
+    margin-left: 100px;
+}
+
+.xs_poor_45_villTitle{
+    height: 10%;
+    width: 100%;
+    color:#000088;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.xs_poor_45_vill{
+    background-color: #eee;
+    padding-bottom: 10px;
+    width: 100%;height:100%;
+    box-sizing: border-box;
+    padding: 1%;
+}
+
+.xs_poor_45_villC{
+    width: 19%;
+    height: 35%;
+    box-sizing: border-box;
+    border: 3px solid #f0f0f0;
+    background-color: #ffffff;
+    box-shadow: 2px 2px 3px rgba(50,50,50,0.5);
+    position: relative;
+    border-radius: 3px;
+    padding: 10px;
+    padding-top: 0px;
+    display: inline-block;
+    padding:1%;
+}
+
+.xs_poor_45_villF{
+    font-size: 18px;
+    font-weight: bold;
+    color: #5c5c5c;
+    text-align: center;
+    height:10%;
+    display: inline-block;
+    vertical-align:middle;
+    /*line-height: 40px;*/
+}
+
+.xs_poor_45_villImg{
+    width: 100%;
+    height: 80%;
+    box-sizing: border-box;
+    margin-top: 10%;
+}
+
+.xs_poor_45_villTip{
+    position: absolute;
+    bottom: 10px;
+    background-color: rgba(0, 0, 0, 0.31);
+    width: 89%;
+    text-align: center;
+    color: #FFFFFF;
+    padding-bottom: 2px;
+    display: none;
+    font-size: 13px;
+    padding: 8px 0px;
+}
+
+.textCenter{
+    display: -webkit-flex; /* Safari */
+    -webkit-align-items: center; /* Safari 7.0+ */
+    display: flex;
+    align-items: center;
+    height: 100%;
+    -webkit-flex:1; /* Safari 6.1+ */
+    flex:1;
+}
+
+#framedCloud{
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px
+}
+
+/*右顶 计时器*/
+#xs_rt_btn_timer{
+    vertical-align: top;
+    position: absolute;
+    right: 0px;
+    top1: 20px;
+    width: 360px;
+    height1: 26px;
+    overflow: hidden;
+    background: transparent;
+    font-size: 25px;
+    font-weight: 900;
+    color: #ff0000;
+    display: inline-block;
+    text-shadow: 2px -2px 2px #690000;
+}
+/*#xs_rt_btn_timer{
+    position: absolute;
+    right: 5px;
+    top: 20px;
+    width: 380px;
+    height: 26px;
+    overflow: hidden;
+    background: transparent;
+    font-size: 25px;
+    font-weight: 900;
+    color: #ff0000;
+    text-shadow: 2px -2px 2px #690000;
+}*/
+
+/*------------右下工具按钮--------------------------------------*/
+.xs_rb_btn{
+    position: absolute;
+    right: 5px;
+    bottom: 128px;
+    width: 26px;
+    height: 26px;
+    overflow: hidden;
+    background-color: #fff;
+    text-align: center;
+    cursor: pointer;
+    line-height: 26px;
+    float: left;
+    color: #9c9c9c;
+    box-shadow: 1px 2px 1px rgba(0,0,0,.15);
+}
+.xs_rb_btn:hover{
+    color: #0e92ee;
+}
+#xs_rb_btn_ztree{
+    bottom: 100px;
+}
+
+#xs_rb_btn_tools{
+    bottom: 72px;
+}
+
+/*底部版权*/
+#xs_b_btn_copyright{
+    position: absolute;
+    left1: -250px;
+    bottom: 5px;
+    text-align: center;
+    margin-left1: 50%;
+    width: 100%;
+    /*height: 26px;*/
+    overflow-x: hidden;
+    overflow-y: hidden;
+    background: transparent;
+    font-size: 20px;
+    font-weight: 900;
+    color: rgba(149, 149, 149, 0.86); /*00bbee  2531EE*/
+    text-shadow:
+    2px -2px 2px #000000
+}
+/*-----------------------------搜索框-------------------------------------------------*/
+#xs_searchbox_boxC{
+    width: 353px;
+    height:38px;
+    position: relative;
+    left: 10px;
+    top1: 2px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-bottom: 5px;
+    margin-right: 40px;
+    background: transparent;
+}
+#xs_searchbox{
+    background: transparent;
+    border1: 1px solid green;
+    vertical-align1: top;
+    background: transparent;
+    /*border: 0px;*/
+}
+#xs_searchbox_C{
+    height: 38px;
+    box-shadow:0px 2px 1px 1px rgba(122, 0, 0, 0.3);
+    background: transparent;
+}
+#xs_searchbox_type{
+    width: 80px;
+    height: 100%;
+    font-size: 15px;
+    cursor: pointer;
+    display: inline-block;
+    border: 0px;
+    outline:none;
+    position: relative;
+    border-radius:2px 0 0 2px;
+    vertical-align: top;
+    background1: transparent;
+}
+
+#xs_searchbox_content{
+    width: 180px;
+    height: 96%;
+    font-size: 15px;
+    display: inline-block;
+    border: 0px;
+    border-left: 1px solid #eee;
+    outline:none;
+    padding-left:5px;
+    position: relative;
+    vertical-align: top;
+}
+#xs_searchbox_button:hover{
+    background:url("../img/searchbox.png") no-repeat 0 -76px #00aedd;
+}
+#xs_searchbox_button{
+    width: 57px;
+    height: 100%;
+    cursor:pointer;
+    display: inline-block;
+    border: 0px;
+    position: relative;
+    border-radius:0 2px 2px 0;
+    background: url("../img/searchbox.png") no-repeat 0 -76px #00bbee;
+    vertical-align: top;
+}
+#xs_searchbox_resultC{
+    width: 353px;
+    height: auto;
+    margin-top: 1px;
+    position: relative;
+    vertical-align: top;
+    border-radius: 0px 0px 2px 2px;
+}
+#xs_searchbox_clear{
+    width: 30px;
+    height: 100%;
+    cursor: default;
+    display: inline-block;
+    position: relative;
+    border1: 1px solid green;
+    background:#fff;
+    /*background: url("../img/searchbox.png") no-repeat 0 -114px #fff;*/
+    box-shadow1:1px 2px 1px 1px rgba(122, 0, 0, 0.3);
+    vertical-align: top;
+}
+#xs_searchbox_loadingC{
+    height: 60%;
+    display: none;
+    position: relative;
+    top:20%;
+    border-left: 1px solid #eee;
+    box-sizing: border-box;
+}
+#xs_searchbox_loading{
+    position: absolute;
+    text-align: center;
+    font-size: 16px;
+    color: #00bbee;
+    padding: 5px;
+    /*position: absolute;*/
+   /* left: 5%;
+    top: 10%;*/
+
+    /*border: 1px solid #ff0000;*/
+}
+#xs_searchbox_resultBaseInf{
+    width: 100%;
+    background: #ffffff;
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+#xs_searchbox_resultBaseInfC{
+    width: 100%;
+    height: 350px;
+    position: relative;
+    left: 5%;
+    top: 5px;
+}
+.xs_searchbox_baseInfPanel1:hover{
+    background:#eee;
+}
+.xs_searchbox_baseInfPanelC{
+    width: 100%;
+    position: relative;
+    top: 15px;
+    margin-bottom: 15px;
+}
+.xs_searchbox_baseInfPanel{
+    width: 90%;
+    height: auto;
+    cursor1: pointer;
+    position: relative;
+    left: 5%;
+    border-radius:3px;
+    border: 1px solid #02BBEE;
+}
+#xs_searchbox_pager{
+    width: 100%;
+    height: 35px;
+    line-height: 35px;
+    background: #fff;
+    border-top: 1px solid #808080;
+    border-radius: 0px 0px 2px 2px;
+}

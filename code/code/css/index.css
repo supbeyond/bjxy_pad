@@ -1,0 +1,68 @@
+body, html{
+    color: #ffffff;
+    background-color: #2eb4fd;
+}
+
+#xs_container{
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    margin-top: -180px;
+    background: transparent;
+    width: 100%;
+    height: 300px;
+}
+
+#xs_l_logo{
+    height: 53px;
+    width: 600px;
+    margin-left: 200px;
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+
+#xs_l_logo div:first-child{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#xs_l_logo div:nth-child(2){
+    display: inline-block;
+    font-size: 30px;
+    text-align: center;
+    line-height: 53px;
+    height: 53px;
+    vertical-align: middle;
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+#xs_login div:first-child{
+    width: 100%;
+    height: 190px;
+    background:#d1d1d1;
+    background:-webkit-linear-gradient(top,#ffffff 20%,#d1d1d1);
+    background:-moz-linear-gradient(top,#ffffff 20%,#d1d1d1);
+    background:-o-linear-gradient(top,#ffffff 20%,#d1d1d1);
+    background:linear-gradient(top,#ffffff 20%,#d1d1d1);
+    position: absolute;
+    top: 20px;
+    left: 0px;
+}
+
+#xs_login_dialog{
+    width: 230px;
+    height: 230px;
+    border-radius: 8px;
+    background:#d1d1d1;
+    background:-webkit-linear-gradient(top,#ffffff,#d1d1d1);
+    background:-moz-linear-gradient(top,#ffffff,#d1d1d1);
+    background:-o-linear-gradient(top,#ffffff,#d1d1d1);
+    background:linear-gradient(top,#ffffff,#d1d1d1);
+    position: absolute;
+    top: 0px;
+    right: 22%;
+    color: #000000;
+    font-size: 14px;
+   /* border: 1px solid red;*/
+}

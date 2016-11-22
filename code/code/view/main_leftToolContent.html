@@ -1,0 +1,55 @@
+<style>
+    #xs_l_toolist div{
+        display: inline-block;
+        box-sizing: border-box;
+        vertical-align: top;
+        width: 100px;
+        height: 100px;
+        text-align: center;
+        padding: 0px;
+        padding-top: 20px;
+        background: #375062;
+        border-color: #375062;
+        border-radius: 50px;
+        box-shadow:
+        0 -4px 5px #3b576a inset,
+        0 4px 5px #375062 inset,
+        4px 2px 5px #375062 inset,
+        -4px 0px 5px #4c7089 inset,
+        0px 2px #202f39;
+       /* -10px 20px 20px rgba(0, 0, 0, 0.59);*/
+
+        transition: all 0.3s ease-out 0s;
+        -ms-transform: all 0.3s ease-out 0s;
+        -webkit-transform: all 0.3s ease-out 0s;
+        -o-transform: all 0.3s ease-out 0s;
+        -moz-transform: all 0.3s ease-out 0s;
+    }
+
+    #xs_l_toolist div:hover{
+        background: #46657c;
+        border-color: #375062;
+        margin-top: 5px;
+        box-shadow:
+        0 -4px 5px #375062 inset,
+        0 4px 5px #375062 inset,
+        4px 0px 5px #375062 inset,
+        -4px 0px 5px #608ead inset,
+        0px 1px #202f39;
+        /*-5px 10px 10px rgba(0, 0, 0, 0.59);*/
+    }
+    #xs_l_toolist div span{
+        font-size: 14px;
+        font-weight: bold;
+        color: #dfdfdf;
+       /* text-shadow:
+        1px -1px 1px #282828,
+        -1px 1px 1px #282828;*/
+    }
+</style>
+<div id="xs_l_toolist" style="background: transparent;border-width: 0px; width: 100%; height: 100%;position: relative;overflow-y: hidden;">
+    <div href="#" onclick="XS.Main.Pkjc.pkdc();" class="easyui-linkbutton" data-options="iconCls:'icon-main_pkdc',iconAlign:'top',size:'large'" style="margin-right: 45px;margin-left: 30px;">贫困洞察</div>
+    <div href="#" onclick="XS.Main.RightClickMenuHandler('sjfx');" class="easyui-linkbutton" data-options="iconCls:'icon-main_sjcl',iconAlign:'top',size:'large'" style="margin-right: 45px;">数据分析</div>
+    <div href="#" onclick="XS.Main.Dispatchcmmd.dispatchCommd();" class="easyui-linkbutton" data-options="iconCls:'icon-main_gtzz',iconAlign:'top',size:'large'" style="margin-right: 45px;">调度指挥</div>
+    <div href="#" onclick="XS.Main.Tjfx.showToolMenu();" class="easyui-linkbutton" data-options="iconCls:'icon-main_tjfx',iconAlign:'top',size:'large'" style="/*border-top-right-radius: 5px*/">统计分析</div>
+</div>
